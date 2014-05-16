@@ -1,0 +1,11 @@
+client = Twitter::REST::Client.new do |config|
+  config.consumer_key        = 716E81rxabyhi1hMdRYV9noLH
+  config.consumer_secret     = 8nNd27zEBnHWO3AqcKCQDSSHbXz0fZEJZP39I6NlKrpZ5VD2l0
+  config.access_token        = 292397662-YbER2UMLxrzZpbjpXlYt19bReXwRrAyZSbxWkBJ1
+  config.access_token_secret = CZrIzGg8L9vuRCSNylfJ08WaAIku7icoaDL8zLNzzDZmr
+end
+
+topics = ["hack", "robotics"]
+client.filter(:track => topics.join(",")) do |object|
+  puts object.text if object.is_a?(Twitter::Tweet)
+end

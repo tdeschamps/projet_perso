@@ -1,0 +1,19 @@
+<h1><%= @listing.title %></h1>
+<div class="container">
+  <div>
+    <%= image_tag @listing.photo %>
+  </div>
+  <div>
+  <p><%= @listing.message %></p>
+  <p><%= @listing.city %></p>
+  <p>$<%=@listing.price%> </p>
+  </div>
+  <div>
+    <div class='form-group'>
+    <%= button_to "Update profile", edit_listing_path, :method => :get, class: "form-group  btn btn-primary" %>
+  </div>
+  <div class='form-group'>
+    <%= button_to "delete", @listing, :method => :delete, class: "btn btn-warning" %>
+  </div>
+  </div>
+<div>

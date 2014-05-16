@@ -1,0 +1,9 @@
+<h1>Dirts#index</h1>
+<p>Find me in app/views/dirts/index.html.erb</p>
+<ul>
+  <% @dirts.each do |dirt| %>
+    <li><strong><%= dirt.name %>:</strong>
+      "<%= dirt.content %>"
+    </li>
+  <% end %>
+</ul>
